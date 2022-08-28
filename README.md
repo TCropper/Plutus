@@ -45,7 +45,7 @@ e.g. Assess PLU increasing in price from 2 to 20 times
 
 if you have GNU_Parallel, you could assess multiple things at once
 
-`parallel Rscript plutus.R 2022 8 1 {1} 12 31 ~/Downloads 6 {2} linear_increase {3} 1.02 5 15 ::: {2023..2030} ::: {500..2500..500} ::: {2..10}`
+`parallel --jobs 8 Rscript plutus.R 2022 8 1 {1} 12 31 ~/Downloads 6 {2} linear_increase {3} 1.02 5 15 ::: {2023..2030} ::: {500..2500..500} ::: {2..10}`
 
 would generate 360 files (8 years times * 5 price points * 9 modifiers)
 
